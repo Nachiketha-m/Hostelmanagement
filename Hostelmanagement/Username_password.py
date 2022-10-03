@@ -15,7 +15,7 @@ window.geometry("300x250")
 
 def login():
     def login_database():
-        mydb = mysql.connector.connect(host = "localhost",user = "root",password = "Amadpsnacha@123",database="projecthostel")
+        mydb = mysql.connector.connect(host = "localhost",user = "root",password = "*******",database="projecthostel")
         cur=mydb.cursor()
         cur.execute("SELECT * from userpwd Where username=%s and password=%s",(e1.get(),e2.get()))
         
