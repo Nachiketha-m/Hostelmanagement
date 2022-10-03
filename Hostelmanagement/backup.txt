@@ -1,0 +1,33 @@
+root=Tk()
+            root.title("STUDENT MAIN PAGE")
+            l1=Label(root,text="STUDENT MAIN PAGE",font="Stencil").pack()
+            root.geometry("350x200")
+            broom=Button(root,text="Room List",height=1,width=13,bg='black',fg='white',font='Bold',command=f.newwindow1).pack()
+            bmess=Button(root,text="Mess",height=1,width=13,bg='black',fg='white',font='Bold',command=f.c6).pack()
+            bfee=Button(root,text="Laundry",height=1,width=13,bg='black',fg='white',font='Bold',command=f.newwindow3).pack()
+            blogout=Button(root,text="Logout",height=1,width=13,bg='black',fg='white',font='Bold',command=f.logout).pack()
+
+
+ global mn,lmn
+    login_window.geometry('1000x1200')
+    mn=ImageTk.PhotoImage(Image.open('pesimg.png'))
+    lmn=Label(login_window,image=mn).pack()
+
+
+    l1=Label(login_window,text="Username",font="times 20")
+    l1.place(x=1,column=1)
+    l2=Label(login_window,text="Password",font="times 20")
+    l2.place(row=2,column=1)
+    l3=Label(login_window,font="times 20")
+    l3.place(row=5,column=2)
+    email_text=StringVar()
+
+    e1=Entry(login_window,textvariable=email_text)
+    e1.place(row=1,column=2)
+    password_text=StringVar()
+    e2=Entry(login_window,textvariable=password_text)
+    e2.place(row=2,column=2)
+    e2.config(show="*")
+    b1=Button(login_window,text="LOGIN",width=20,command=login_database)
+    b1.place(row=4,column=2)
+    login_window.mainloop()
